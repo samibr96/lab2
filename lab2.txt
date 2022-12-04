@@ -1,0 +1,21 @@
+Task1:
+
+Classes Volvo240 and saab95 are subclass of class AllVehicles. It mean that classes Volvo240 and Saab95 extended class AllVehicles. AllVehicles is a base class and abstract class. This class contain all common data of Vehicles. The class from which the classes Volvo240 and Saab95 is derived  is called  a superclass.
+
+Of course, the principle of OCP was used, in that instead of compiling more than one class in AllVehicles, we used inheritance and created a class Volvo240 and a class Saab95. This means if we want to add for exempel a class Motorbike, I can create a new class and use inheritance instead of adding it in AllVehicles, and also if when I added an function TurboOn in Sabb95, instead of added in AllVehicles.
+
+The abstract contain Implementation code, while the Interface contain no code, but rather declarations, so I use abstract instead of Interface. 
+
+There is an advantage in interface that I can do Implements for more than one interface unlike abstract which allows inheritance for one class. But here I will inherit from one class only from one class so I used.
+
+
+Task3:
+Here it was used interface because the code only contains declarations.
+
+Task5:
+
+
+I did a test for NrDoors, EnginePower, EnginePower, x postion , y postion, Color, TurnRight, TurnLeft, move, gas and break.
+
+I modified the code several times and used "if" with a specific interval to get right test.
+
