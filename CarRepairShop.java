@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CarRepairShop<T extends AllVehicles> {
+public class CarRepairShop<Car extends AllVehicles> {
 
-    private List<T> cars;
+    private List<Car> cars;
 
     public double x;
     public double y;
@@ -26,7 +26,7 @@ public class CarRepairShop<T extends AllVehicles> {
         return cars.size() >= maxNrOfCas;
     }
 
-    private void carloadW (T car)
+    private void carloadW (Car car)
     {
         double variableX = car.getX() ;
         double variableY = car.getY() ;
@@ -36,7 +36,7 @@ public class CarRepairShop<T extends AllVehicles> {
         }
     }
 
-    private void carUnloadW (T car)
+    private void carUnloadW (Car car)
     {
 
         double variableX = car.getX() ;
