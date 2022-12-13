@@ -1,7 +1,7 @@
 
 import java.awt.*;
 
-public class Scania extends AllVehicles {
+public class Scania extends Vehicle {
 
     private double trimFactor = 1.25;
 
