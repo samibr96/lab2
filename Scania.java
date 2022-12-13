@@ -2,7 +2,8 @@
 import java.awt.*;
 
 public class Scania extends Vehicle {
-
+    
+    private double Angle;
     private double trimFactor = 1.25;
 
     public Scania(Direction direction , double x, double y) {
@@ -18,7 +19,7 @@ public class Scania extends Vehicle {
     
 
 
-    public void increaseAngle(double amount,double Angle) 
+    public void increaseAngle(double amount) 
     
     {
 
@@ -34,7 +35,7 @@ public class Scania extends Vehicle {
         }
     }
 
-    public void decreaseAngle(double amount,double Angle) 
+    public void decreaseAngle(double amount) 
     {
         double res = Angle - Math.abs(amount);
 
