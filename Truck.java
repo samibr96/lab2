@@ -2,7 +2,7 @@ import java.awt.*;
 
 
 
-public class Truck extends AllVehicles {
+public class Truck extends Vehicle {
 
     private double trimFactor = 1.25;
     
