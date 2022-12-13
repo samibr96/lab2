@@ -1,7 +1,7 @@
 import java.awt.*;
 
 
-public class Saab95 extends AllVehicles 
+public class Saab95 extends Vehicle 
 
 {
    
