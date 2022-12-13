@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CarRepairShop<Car extends AllVehicles> {
+public class CarRepairShop<Car extends Vehicle> {
 
     private List<Car> cars;
 
