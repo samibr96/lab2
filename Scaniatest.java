@@ -10,7 +10,7 @@ public class Scaniatest {
     @Test
     public void testgetCurrentSpeed() {
         Scania scaniatest = new Scania(Direction.WEST ,  0,  0);
-        scaniatest.increaseAngle(1,70);
+        scaniatest.increaseAngle(1);
         assertEquals(0,scaniatest.getCurrentSpeed(), 0);
     }
 
