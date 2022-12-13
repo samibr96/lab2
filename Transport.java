@@ -7,13 +7,13 @@ public class Transport extends Truck
 
 {
 
-    private boolean PlatformDown;
-    private double carDistance; 
+    private boolean PlatformDown = false;
+    private double carDistance = 0;  /// ask about that
 
     //Deque<AllVehicles> Deque = new ArrayDeque<>();
 
 
-    Stack <AllVehicles> stack = new Stack<>();
+    Stack <Vehicle> stack = new Stack<>();
 
 
     public Transport(Direction direction , double x, double y) {
@@ -30,7 +30,7 @@ public class Transport extends Truck
         PlatformDown = getCurrentSpeed() == 0;
     }
 
-    private void loadCars(AllVehicles vehicle) {
+    private void loadCars(Vehicle vehicle) {
         if (stack.size() < 10)
             if ((PlatformDown && 0 < carDistance) && (carDistance <= 1)) {
                 stack.push(vehicle);
@@ -47,7 +47,7 @@ public class Transport extends Truck
 
     public void move() {
         super.move();
-        for (AllVehicles vehiclesStack : stack) {
+        for (Vehicle vehiclesStack : stack) {
             vehiclesStack.setX(getX() + getCurrentSpeed());
             vehiclesStack.setY(getY() + getCurrentSpeed());
         }
