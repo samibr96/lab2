@@ -13,14 +13,13 @@ public abstract class Vehicle implements Movable {
     private double y;
     private boolean engineTurnOn = false;
 
-    protected Point position = new Point(0, 0);
-
     public Point getPosition() {
-        return position;
+        return new Point((int) x,(int) y);
     }
 
     public void setPosition(Point newPos) {
-        this.position = newPos;
+        x = newPos.x;
+        y = newPos.y;
     }
     
     
