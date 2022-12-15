@@ -7,13 +7,16 @@ public class Transport extends Truck
 
 {
 
-    private boolean PlatformDown = false;
-    private double carDistance = 0;  /// ask about that
+    private boolean Platformup = true;  
+    private Storage storage;
+    private Truck truck;
+    private Ramp ramp;
+
 
     //Deque<AllVehicles> Deque = new ArrayDeque<>();
 
 
-    Stack <Vehicle> stack = new Stack<>();
+    Stack <Vehicle > stack = new Stack<>();
 
 
     public Transport(Direction direction , double x, double y) {
@@ -21,43 +24,47 @@ public class Transport extends Truck
 
     }
 
-    public void raisePlatform() {
-        PlatformDown = getCurrentSpeed() != 0;
+    public boolean raisePlatform() {
+        return ramp.raisePlatform();
     }
 
 
     public void lowerPlatform() {
-        PlatformDown = getCurrentSpeed() == 0;
+
+        ramp.lowerPlatform();        
     }
 
-    private void loadCars(Vehicle vehicle) {
-        if (stack.size() < 10)
-            if ((PlatformDown && 0 < carDistance) && (carDistance <= 1)) {
-                stack.push(vehicle);
-        } 
+    public void loadCars(Vehicle  car) { 
 
-    }
-
-    private void unloadCars() {
-        if (PlatformDown) {
-            stack.pop();
-            carDistance = 1;
+        if (!Platformup) 
+        {
+            storage.carloadW(car);
         }
+
+    }
+
+    public void unloadCars(Vehicle  car) {
+
+        if (!Platformup) 
+
+        {
+            storage.carUnloadW(car);
+        }
+       
     }
 
     public void move() {
+        
+        if (!Platformup){
         super.move();
-        for (Vehicle vehiclesStack : stack) {
+        
+        
+        for (Vehicle  vehiclesStack : stack) {
             vehiclesStack.setX(getX() + getCurrentSpeed());
             vehiclesStack.setY(getY() + getCurrentSpeed());
         }
     }
-
-
-
-
-
-
+    }
 
 
     @Override

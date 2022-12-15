@@ -2,9 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CarRepairShop<Car extends Vehicle> {
+public class CarRepairShop     {
 
-    private List<Car> cars;
+    private List<Vehicle> cars;
+
+    private Storage storage;
+
 
     public double x;
     public double y;
@@ -22,31 +25,18 @@ public class CarRepairShop<Car extends Vehicle> {
         this.y = y;
     }
 
-    private boolean isWorkShopFull() {
+    public boolean isWorkShopFull() {
         return cars.size() >= maxNrOfCas;
     }
 
-    private void carloadW (Car car)
+    public void carload (Vehicle car)
     {
-        double variableX = car.getX() ;
-        double variableY = car.getY() ;
-        if ((variableX == (this.x - 10)) && (variableY == (this.y - 10)) && car.getCurrentSpeed() == 0 )
-        {
-            cars.add(car);
-        }
+        storage.carloadW(car);
     }
 
-    private void carUnloadW (Car car)
-    {
-
-        double variableX = car.getX() ;
-        double variableY = car.getY() ;
-        if ((variableX != (this.x - 10)) && (variableY != (this.y - 10)) && car.getCurrentSpeed() == 0 )
-        {
-            cars.remove(car);
-        }
-
-        
+    public void carUnload (Vehicle car)
+    { 
+        storage.carUnloadW(car);
     }
     
     
