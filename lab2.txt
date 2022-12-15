@@ -5,5 +5,8 @@ The two classes follow LSP but there is something that is that they both contain
 
 2. First, I created a class called Storage, which contains some functions related to load and unload car. After that, the method of load the car is similar between the transport and the CarRepairShop in terms of the nearby, I used the same functions loadCars and unloadCars from Storage class. So delegation Delegation used in Transport and CarRepairShop when we send carloadW and carUnloadW.
 
+3. The code follows OCP, where it became possible to add more types of vehicles, for example, bicycles and motorcycles, without the need to modify Vehicle class (Especially after adding the truck class).
+
+That's what I did from the start. Instead of creating a class for cars only, I created a class for all vehicles.
 
 
