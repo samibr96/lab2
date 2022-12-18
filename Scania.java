@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class Scania extends Vehicle { //// change to implment and ask them
 
-    private double Angle; /// Ask him if it's true
+    private double angle; /// Ask him if it's true
 
     private double platformAngle = 0;
 
@@ -49,29 +49,29 @@ public class Scania extends Vehicle { //// change to implment and ask them
     
     {
 
-        double res = Angle + amount;
+        double res = angle + amount;
 
         if (getCurrentSpeed() == 0) {
             if ( res > 70) 
             {
-                Angle = 70;
+                angle = 70;
             } 
             else
-            Angle = Angle + amount;
+            angle = angle + amount;
         }
     }  //override gas
         // start engien
 
     public void decreaseAngle(double amount) 
     {
-        double res = Angle - Math.abs(amount);
+        double res = angle - Math.abs(amount);
 
         if ( res < 0) 
         {
-            Angle = 0;
+            angle = 0;
         } 
         else
-        Angle = Angle - Math.abs(amount);
+        angle = angle - Math.abs(amount);
     }
 
     
