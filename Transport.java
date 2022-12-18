@@ -16,7 +16,7 @@ public class Transport extends Truck
     //Deque<AllVehicles> Deque = new ArrayDeque<>();
 
 
-    Stack <Vehicle > stack = new Stack<>();
+    private Stack <Vehicle > stack = new Stack<>();
 
 
     public Transport(Direction direction , double x, double y) {
