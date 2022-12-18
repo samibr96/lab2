@@ -1,7 +1,7 @@
 
 import java.awt.*;
 
-public class Scania extends Vehicle { //// change to implment and ask them
+public class Scania extends Truck { //// change to implment and ask them
 
     private double angle; /// Ask him if it's true
 
@@ -9,7 +9,6 @@ public class Scania extends Vehicle { //// change to implment and ask them
 
     private double trimFactor = 1.25;
 
-    private Truck truck;
 
     private Ramp ramp;
 
@@ -26,7 +25,7 @@ public class Scania extends Vehicle { //// change to implment and ask them
     }
 
     public void lowerPlatform(int amount){
-        if(truck.getCurrentSpeed() == 0 && amount <= 70 && amount >= 0) {
+        if(getCurrentSpeed() == 0 && amount <= 70 && amount >= 0) {
             platformAngle =  amount;
         }  
     }
