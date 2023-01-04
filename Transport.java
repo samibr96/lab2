@@ -7,9 +7,7 @@ public class Transport extends Truck
 
 {
 
-    private boolean platformup = true;  
     private Storage storage;
-    private Truck truck;
     private Ramp ramp;
 
 
@@ -36,7 +34,7 @@ public class Transport extends Truck
 
     public void loadCars(Vehicle  car) { 
 
-        if (!platformup) 
+        if (!raisePlatform()) 
         {
             storage.carloadW(car);
         }
@@ -45,7 +43,7 @@ public class Transport extends Truck
 
     public void unloadCars(Vehicle  car) {
 
-        if (!platformup) 
+        if (!raisePlatform()) 
 
         {
             storage.carUnloadW(car);
@@ -55,7 +53,7 @@ public class Transport extends Truck
 
     public void move() {
         
-        if (!platformup){
+        if (!raisePlatform()){
         super.move();
         
         
