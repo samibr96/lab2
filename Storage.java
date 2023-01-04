@@ -11,7 +11,7 @@ public class Storage  {
     {
         double variableX = car.getX() ;
         double variableY = car.getY() ;
-        if ((variableX == (this.x - 10)) && (variableY == (this.y - 10)) && car.getCurrentSpeed() == 0 )
+        if (this.x - 10 < variableX && variableX < this.x + 10 && this.y - 10 < variableY && variableY < this.y + 10 && car.getCurrentSpeed() == 0)
         {
             cars.add(car);
         }
