@@ -17,8 +17,8 @@ public class Transport extends Truck
     private Stack <Vehicle > stack = new Stack<>();
 
 
-    public Transport(Direction direction , double x, double y) {
-        super("Truck D50SE-5", 2, 300, 2, Color.ORANGE, direction , x, y);
+    public Transport(Direction direction , double x, double y, boolean ramp) {
+        super("Truck D50SE-5", 2, 300, 2, Color.ORANGE, direction , x, y, false);
 
     }
 
