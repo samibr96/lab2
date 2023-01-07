@@ -13,7 +13,7 @@ public class Truck extends Vehicle  {
         return getEnginePower() * 0.01 * trimFactor;
     }
 
-    public Truck(String modelName, int nrDoors, double enginePower, double currentSpeed, Color color, Direction direction , double x, double y) {
+    public Truck(String modelName, int nrDoors, double enginePower, double currentSpeed, Color color, Direction direction , double x, double y, boolean liftBed) {
         super(modelName, nrDoors, enginePower, currentSpeed, color, direction , x, y);
 
     }
