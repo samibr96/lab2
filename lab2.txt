@@ -1,4 +1,4 @@
-1. Gas() used increamentSpeed() with amount between 0 and 1, while Break() uses decrementSpeed  with amount between 0 and 1.
+1. Gas() used increamentSpeed() with amount between 0 and 1, while Break() uses decrementSpeed  with amount between 0 and 1. This implementation detail is not part of the contract of these methods. The contract of a method should only define the behavior that the method provides, and the inputs and outputs that it expects, without revealing its implementation details. In this case, the contract of Gas() should only specify that it increases the speed of the vehicle, while the contract of Brake() should only specify that it decreases the speed of the vehicle, without mentioning how this is implemented.
 
 The two classes follow LSP but there is something that is that they both contain different methods apart from gas() and break() so it is not possible to switch between them at the time we want unless the common methods between them are used such as gas() and break().
 
