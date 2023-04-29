@@ -1,13 +1,19 @@
 public class Ramp{
 
     private Truck truck;
-    private boolean Platformup = true;  /// ask about that
+    private boolean Platformup = true; 
+
+    public Ramp(Truck truck) {
+        this.truck = truck;
+        }
 
 
 
     public boolean raisePlatform() {
         return Platformup;
     }
+
+    
 
 
 
