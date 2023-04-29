@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Storage  {
@@ -6,6 +7,9 @@ public class Storage  {
     public double x;
     public double y;
 
+public Storage() {
+        cars = new ArrayList<Vehicle>();
+    }
 
     public  void carloadW (Vehicle car)
     {
