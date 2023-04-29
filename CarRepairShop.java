@@ -23,6 +23,7 @@ public class CarRepairShop     {
         this.maxNrOfCas = maxAmountOfCars;
         this.x = x;
         this.y = y;
+        this.storage = new Storage();
     }
 
     public boolean isWorkShopFull() {
