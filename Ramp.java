@@ -5,6 +5,8 @@ public class Ramp{
 
     public Ramp(Truck truck) {
         this.truck = truck;
+        this.Platformup = true;
+
         }
 
 
