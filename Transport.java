@@ -22,6 +22,7 @@ public class Transport extends Truck
 
         this.ramp = new Ramp(this);
         this.storage = new Storage();
+        this.stack = new Stack<>();
 
     }
 
