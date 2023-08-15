@@ -20,6 +20,9 @@ public class Transport extends Truck
     public Transport(Direction direction , double x, double y, boolean ramp) {
         super("Truck D50SE-5", 2, 300, 2, Color.ORANGE, direction , x, y, false);
 
+        this.ramp = new Ramp(this);
+        this.storage = new Storage();
+
     }
 
     public boolean raisePlatform() {
