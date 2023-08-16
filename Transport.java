@@ -1,7 +1,6 @@
 
 
 import java.awt.*;
-import java.util.Stack;
 
 public class Transport extends Truck
 
@@ -14,7 +13,6 @@ public class Transport extends Truck
     //Deque<AllVehicles> Deque = new ArrayDeque<>();
 
 
-    private Stack <Vehicle > stack = new Stack<>();
 
 
     public Transport(Direction direction , double x, double y, boolean ramp) {
@@ -22,7 +20,6 @@ public class Transport extends Truck
 
         this.ramp = new Ramp(this);
         this.storage = new Storage();
-        this.stack = new Stack<>();
 
     }
 
@@ -61,10 +58,7 @@ public class Transport extends Truck
         super.move();
         
         
-        for (Vehicle  vehiclesStack : stack) {
-            vehiclesStack.setX(getX() + getCurrentSpeed());
-            vehiclesStack.setY(getY() + getCurrentSpeed());
-        }
+    
     }
     }
 
