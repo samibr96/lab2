@@ -7,9 +7,9 @@ public class Storage  {
     public double x;
     public double y;
 
-public Storage() {
-        cars = new ArrayList<Vehicle>();
-    }
+    public Storage() {
+            cars = new ArrayList<Vehicle>();
+        }
 
     public  void carloadW (Vehicle car)
     {
